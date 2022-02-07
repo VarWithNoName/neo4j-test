@@ -1,0 +1,16 @@
+<form [formGroup]="cypherForm"  novalidate>
+    <mat-form-field >
+        <mat-label>Autosize textarea</mat-label>
+        <textarea matInput
+                  formControlName="cypherQuery"
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+     
+      <button mat-raised-button color="primary" (click)="submitFormBolt()">Submit bolt</button>
+      </form>
+    
+      <pre>{{$neo4resp | async | json}}</pre>
+    
